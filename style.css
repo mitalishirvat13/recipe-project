@@ -1,3 +1,11 @@
+/* === BASIC SETUP & VARIABLES === */
+:root {
+  --primary-bg-color: #926153; /* Main brown color for labels */
+  --header-bg-color: #333;      /* Dark color for header/footer */
+  --text-color-light: #ffffff;   /* White text */
+  --hover-color: #ffe0b2;       /* Link hover color */
+  --card-gap: 25px;              /* Gap between cards */
+}
 
 * {
   margin: 0;
@@ -8,26 +16,43 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  background-color: #f4f4f4; /* Added a light background for better contrast */
 }
 
-
+/* === HEADER & NAVIGATION === */
 header {
+  background-color: var(--header-bg-color);
   padding: 15px 20px;
+  position: sticky; /* Makes the header stick to the top */
+  top: 0;
+  z-index: 100;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.special-line {
+    font-family: 'Great Vibes', cursive; /* Sirf is line ka font badlega */
+    font-size: 2.8rem;
+    text-align: center;
+    color: #5a2d0c;
+    margin-top: 30px;
+}  
+
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; 
-  max-width: 1100px;
+  flex-wrap: wrap;
+  max-width: 1200px;
   margin: auto;
+  gap: 20px; /* Gap between logo and nav links if they wrap */
 }
 
 .logo {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  color: white;
+  color: var(--text-color-light);
 }
 
 nav ul {
@@ -35,63 +60,67 @@ nav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 25px; /* Replaced margin-left with gap for better spacing */
 }
 
-nav ul li {
-  margin-left: 20px;
-}
+/* We don't need 'nav ul li' rule anymore because of gap */
 
 nav ul li a {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 1.5rem;
-  font-weight: 500;
-  transition: color 0.3s;
+  color: var(--text-color-light);
+  font-size: 1.3rem; /* Slightly reduced size for better balance */
+  font-weight: 500; /* Removed duplicate font-weight */
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #ffe0b2;
+  color: var(--hover-color);
 }
 
-
+/* === MAIN CONTENT & CATEGORY GRID === */
 .heading {
   text-align: center;
-  margin: 40px 20px;
+  margin: 50px 20px 40px 20px; /* Adjusted margin */
 }
 
 .category-grid {
   display: grid;
+  /* Start with 4 columns on large screens */
   grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
+  gap: var(--card-gap);
   max-width: 1200px;
   margin: auto;
-  padding: 20px;
+  padding: 0 20px; /* Adjusted padding */
 }
 
 .card {
-  position: relative;
   text-align: center;
+  background-color: var(--text-color-light);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.card:hover {
+    transform: translateY(-5px); /* Lifts the card up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card img {
   width: 100%;
-  height: 400px;
+  height: 350px; /* Slightly reduced height */
   object-fit: cover;
-  border-radius: 5px;
   display: block;
-  transition: transform 0.3s ease;
-}
-
-.card img:hover {
-  transform: scale(1.05);
 }
 
 .label {
-  margin-top: 10px;
-  background: #926153;   
-  color: white;
+  /* PROBLEM 1 SOLVED: Reduced the margin-top */
+  margin: 8px 0 12px 0; /* Top, Right, Bottom, Left. Overall padding inside card */
+  background: var(--primary-bg-color);
+  color: var(--text-color-light);
   font-weight: bold;
   padding: 8px 15px;
   border-radius: 3px;
@@ -100,12 +129,36 @@ nav ul li a:hover {
   letter-spacing: 1px;
 }
 
-
-
+/* === FOOTER === */
 footer {
   text-align: center;
-  background: #333;
-  color: white;
-  padding: 15px;
-  margin-top: 30px;
+  background: var(--header-bg-color);
+  color: var(--text-color-light);
+  padding: 20px;
+  margin-top: 50px;
+}
+
+
+/* === RESPONSIVENESS (For different screen sizes) === */
+
+/* For Tablets */
+@media (max-width: 992px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+/* For Mobile Phones */
+@media (max-width: 576px) {
+  nav {
+    justify-content: center; /* Center logo and nav links on mobile */
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+
+  .card img {
+      height: 300px; /* Adjust height for mobile */
+  }
 }
