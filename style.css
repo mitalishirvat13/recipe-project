@@ -1,17 +1,14 @@
 /* === BASIC SETUP & VARIABLES === */
-root {
+:root {
   --header-bg-color: #ff6f61;
   --text-color-light: #fff;
   --hover-color: #ffd1c1;
 }
-
-/* === RESET === */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -20,10 +17,8 @@ body {
   display: flex;
   flex-direction: column;
 }
-
-/* === HEADER === */
 header {
-  background-color: var(--header-bg-color);
+  /* background-color:  #5a2d0c; */
   padding: 15px 20px;
   position: sticky;
   top: 0;
@@ -31,7 +26,6 @@ header {
   width: 100%;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -42,100 +36,75 @@ nav {
   gap: 20px;
   width: 100%;
 }
-
 .logo {
   font-size: 1.8rem;
   font-weight: bold;
-  color: var(--text-color-light);
+  color: brown;
 }
-
 nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 25px;
+  color: brown;
+  
+  
 }
-
 nav ul li a {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-decoration: none;
-  color: var(--text-color-light);
+  color: brown;
   font-size: 1.3rem;
   font-weight: 500;
   transition: color 0.3s ease;
+  
 }
-
 nav ul li a:hover {
   color: var(--hover-color);
 }
 
 
- 
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
-.special-line {
-    font-family: 'Great Vibes', cursive; /* Sirf is line ka font badlega */
+/* .special-line {
+    font-family: 'Great Vibes', cursive; 
     font-size: 2.8rem;
     text-align: center;
     color: #5a2d0c;
     margin-top: 30px;
-}  
+}   */
 
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: auto;
-  gap: 20px; /* Gap between logo and nav links if they wrap */
-}
 
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: var(--text-color-light);
-}
 
-nav ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px; /* Replaced margin-left with gap for better spacing */
-}
 
-/* We don't need 'nav ul li' rule anymore because of gap */
+
+
 
 nav ul li a {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-decoration: none;
   color: var(--text-color-light);
-  font-size: 1.3rem; /* Slightly reduced size for better balance */
-  font-weight: 500; /* Removed duplicate font-weight */
+  font-size: 1.3rem; 
+  font-weight: 500; 
   transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-  color: var(--hover-color);
-}
 
 /* === MAIN CONTENT & CATEGORY GRID === */
 .heading {
   text-align: center;
-  margin: 50px 20px 40px 20px; /* Adjusted margin */
+  margin: 50px 20px 40px 20px; 
 }
 
 .category-grid {
   display: grid;
-  /* Start with 4 columns on large screens */
+  
   grid-template-columns: repeat(4, 1fr);
-  gap: var(--card-gap);
+  gap: 30px;
   max-width: 1200px;
   margin: auto;
-  padding: 0 20px; /* Adjusted padding */
+  padding: 0 20px; 
 }
 
 .card {
@@ -155,14 +124,13 @@ nav ul li a:hover {
 
 .card img {
   width: 100%;
-  height: 350px; /* Slightly reduced height */
+  height: 350px;
   object-fit: cover;
   display: block;
 }
 
 .label {
-  /* PROBLEM 1 SOLVED: Reduced the margin-top */
-  margin: 8px 0 12px 0; /* Top, Right, Bottom, Left. Overall padding inside card */
+  margin: 8px 0 12px 0;
   background: var(--primary-bg-color);
   color: var(--text-color-light);
   font-weight: bold;
@@ -172,11 +140,29 @@ nav ul li a:hover {
   font-size: 0.9rem;
   letter-spacing: 1px;
 }
+.card p{
+  color: #5a2d0c;
+
+}
+.card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease, filter 0.6s ease;
+  transform: perspective(800px) translateZ(0); /* initial position */
+}
+
+.card:hover img {
+  transform: perspective(800px) translateZ(60px) scale(1.15); /* saamne aayegi + zoom */
+  filter: brightness(1.1); /* thoda bright ho jaayegi */
+}
 
 /* === FOOTER === */
- .footer {
+.footer {
             background-color:  #5a2d0c;
             color: #fff;
+            margin-top: 80px;
             padding: 40px 20px;
             display: flex;
             justify-content: space-between;
@@ -189,7 +175,7 @@ nav ul li a:hover {
             align-items: center;
         }
         .footer .social-icons i {
-            font-size: 24px;
+            font-size: 30px;
             cursor: pointer;
             transition: transform 0.3s;
         }
@@ -203,7 +189,7 @@ nav ul li a:hover {
             flex-wrap: wrap;
         }
         .footer .signup input {
-            padding: 10px;
+            padding: 15px;
             border: none;
             border-radius: 3px;
             outline: none;
@@ -215,11 +201,11 @@ nav ul li a:hover {
             width: 250px;
         }
         .footer .signup button {
-            background-color:  #5a2d0c;
+            background-color:  #a1663c;
             border: none;
             padding: 10px 20px;
             color: #fff;
-            font-weight: bold;
+            
             cursor: pointer;
             border-radius: 3px;
         }
@@ -228,8 +214,8 @@ nav ul li a:hover {
         }
         .footer .label {
             font-weight: bold;
-            text-transform: uppercase;
-            margin-right: 10px;
+            /* text-transform: uppercase; */
+            margin-right: 30px;
         }
         @media (max-width: 768px) {
             .footer {
@@ -262,6 +248,6 @@ nav ul li a:hover {
   }
 
   .card img {
-      height: 300px; /* Adjust height for mobile */
+      height: 300px; 
   }
 }
