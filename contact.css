@@ -1,107 +1,170 @@
+:root {
+  --header-bg-color: #ff6f61;
+  --text-color-light: #fff;
+  --hover-color: #ffd1c1;
+}
+
+/* === RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === BODY === */
 body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to bottom, #fff7f0, #ffe8d6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: linear-gradient(to bottom, #fff7f0, #ffe8d6);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.recipe-contact .card {
-    background: #fffaf0;
-    padding: 30px 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    max-width: 400px;
-    width: 100%;
-    text-align: center;
-    position: relative;
+/* === HEADER === */
+header {
+  background-color:  #5a2d0c;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.recipe-contact h1 {
-    color: #ff6f61;
-    margin-bottom: 10px;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 20px;
+  width: 100%;
 }
 
-.recipe-contact p {
-    color: #555;
-    margin-bottom: 20px;
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--text-color-light);
 }
 
-.recipe-contact label {
-    display: block;
-    text-align: left;
-    margin: 10px 0 5px;
-    font-weight: bold;
-    color: #333;
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
 }
 
-.recipe-contact input,
-.recipe-contact textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    font-size: 14px;
-    outline: none;
+nav ul li a {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-decoration: none;
+  color: var(--text-color-light);
+  font-size: 1.3rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-.recipe-contact button {
-    width: 100%;
-    padding: 12px;
-    background-color: #ff6f61;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s;
+nav ul li a:hover {
+  color: var(--hover-color);
 }
 
-.recipe-contact button:hover {
-    background-color: #ff3b2e;
-    transform: scale(1.05);
+
+/* === CONTACT FORM SECTION === */
+.recipe-contact {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
 }
 
-#successMessage {
-    display: none;
-    color: green;
-    margin-top: 15px;
-    font-weight: bold;
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
 }
-/* Rating stars */
+
+.card h1 {
+  margin-bottom: 10px;
+  color: #ff6f61;
+}
+
+.card p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+form label {
+  display: block;
+  text-align: left;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+form input, form textarea, form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem;
+}
+
+form textarea {
+  height: 100px;
+  resize: none;
+}
+
 .rating {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
 }
 
 .rating input {
-    display: none;
+  display: none;
 }
 
 .rating label {
-    font-size: 25px;
-    color: #ddd;
-    cursor: pointer;
-    transition: color 0.2s;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 0 5px;
 }
 
-.rating input:checked ~ label,
-.rating label:hover,
-.rating label:hover ~ label {
-    color: #ff6f61;
+button {
+  background:  #5a2d0c;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
-/* Dropdown select styling */
-select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    font-size: 14px;
+button:hover {
+  background:  #5a2d00;
+}
+
+#successMessage {
+  display: none;
+  margin-top: 15px;
+  color: green;
+  font-weight: bold;
+}
+
+/* === FOOTER === */
+footer {
+  background-color: #5a2d0c; 
+  color: white;
+  text-align: center;
+  padding: 15px 20px;
+  margin-top: auto;
 }

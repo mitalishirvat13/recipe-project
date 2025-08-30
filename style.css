@@ -1,12 +1,11 @@
 /* === BASIC SETUP & VARIABLES === */
-:root {
-  --primary-bg-color: #926153; /* Main brown color for labels */
-  --header-bg-color: #333;      /* Dark color for header/footer */
-  --text-color-light: #ffffff;   /* White text */
-  --hover-color: #ffe0b2;       /* Link hover color */
-  --card-gap: 25px;              /* Gap between cards */
+root {
+  --header-bg-color: #ff6f61;
+  --text-color-light: #fff;
+  --hover-color: #ffd1c1;
 }
 
+/* === RESET === */
 * {
   margin: 0;
   padding: 0;
@@ -16,18 +15,63 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f4f4f4; /* Added a light background for better contrast */
+  background: linear-gradient(to bottom, #fff7f0, #ffe8d6);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* === HEADER & NAVIGATION === */
+/* === HEADER === */
 header {
   background-color: var(--header-bg-color);
   padding: 15px 20px;
-  position: sticky; /* Makes the header stick to the top */
+  position: sticky;
   top: 0;
   z-index: 100;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 20px;
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--text-color-light);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+nav ul li a {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-decoration: none;
+  color: var(--text-color-light);
+  font-size: 1.3rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--hover-color);
+}
+
+
+ 
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 .special-line {
@@ -130,14 +174,73 @@ nav ul li a:hover {
 }
 
 /* === FOOTER === */
-footer {
-  text-align: center;
-  background: var(--header-bg-color);
-  color: var(--text-color-light);
-  padding: 20px;
-  margin-top: 50px;
-}
-
+ .footer {
+            background-color:  #5a2d0c;
+            color: #fff;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .footer .social-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .footer .social-icons i {
+            font-size: 24px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .footer .social-icons i:hover {
+            transform: scale(1.2);
+        }
+        .footer .signup {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .footer .signup input {
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            outline: none;
+        }
+        .footer .signup input:first-child {
+            width: 150px;
+        }
+        .footer .signup input:nth-child(2) {
+            width: 250px;
+        }
+        .footer .signup button {
+            background-color:  #5a2d0c;
+            border: none;
+            padding: 10px 20px;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .footer .signup button:hover {
+            background-color: #d19f3c;
+        }
+        .footer .label {
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-right: 10px;
+        }
+        @media (max-width: 768px) {
+            .footer {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+            .footer .signup input:first-child, .footer .signup input:nth-child(2) {
+                width: 100%;
+            }
+        }
 
 /* === RESPONSIVENESS (For different screen sizes) === */
 
