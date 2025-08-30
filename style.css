@@ -1,171 +1,253 @@
-/* Reset */
+/* === BASIC SETUP & VARIABLES === */
+:root {
+  --header-bg-color: #ff6f61;
+  --text-color-light: #fff;
+  --hover-color: #ffd1c1;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
-  font-family: 'Arial', sans-serif;
-  background: #fafafa;
-  color: #333;
+  font-family: Arial, sans-serif;
   line-height: 1.6;
+  background: linear-gradient(to bottom, #fff7f0, #ffe8d6);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-
-/* Navbar */
 header {
-  background: #ff7043;
-  color: white;
-  padding: 15px 30px;
+  /* background-color:  #5a2d0c; */
+  padding: 15px 20px;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 100;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 20px;
+  width: 100%;
 }
-
-nav .logo {
+.logo {
   font-size: 1.8rem;
   font-weight: bold;
-  font-family: cursive;
+  color: brown;
 }
-
 nav ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 25px;
+  color: brown;
+  
+  
 }
+nav ul li a {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-decoration: none;
+  color: brown;
+  font-size: 1.3rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  
+}
+nav ul li a:hover {
+  color: var(--hover-color);
+}
+
+
+
+/* .special-line {
+    font-family: 'Great Vibes', cursive; 
+    font-size: 2.8rem;
+    text-align: center;
+    color: #5a2d0c;
+    margin-top: 30px;
+}   */
+
+
+
+
+
+
+
 
 nav ul li a {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-decoration: none;
-  color: white;
-  font-weight: bold;
-  transition: 0.3s;
+  color: var(--text-color-light);
+  font-size: 1.3rem; 
+  font-weight: 500; 
+  transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-  color: #ffe0b2;
-}
 
-/* Heading */
+/* === MAIN CONTENT & CATEGORY GRID === */
 .heading {
   text-align: center;
-  padding: 40px 20px;
-  background: linear-gradient(135deg, #ffe0b2, #ffcc80);
+  margin: 50px 20px 40px 20px; 
 }
 
-.heading h1 {
-  font-size: 2.5rem;
-  font-family: 'Georgia', serif;
-  color: #333;
-}
-
-/* Recipe Cards Grid */
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  padding: 40px;
+  
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px; 
 }
 
 .card {
-  position: relative;
+  text-align: center;
+  background-color: var(--text-color-light);
+  border-radius: 8px;
   overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.card:hover {
+    transform: translateY(-5px); /* Lifts the card up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card img {
   width: 100%;
-  height: 100%;
+  height: 350px;
+  object-fit: cover;
   display: block;
-  border-radius: 15px;
-  transition: transform 0.4s ease;
+}
+
+.label {
+  margin: 8px 0 12px 0;
+  background: var(--primary-bg-color);
+  color: var(--text-color-light);
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+.card p{
+  color: #5a2d0c;
+
+}
+.card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease, filter 0.6s ease;
+  transform: perspective(800px) translateZ(0); /* initial position */
 }
 
 .card:hover img {
-  transform: scale(1.1);
+  transform: perspective(800px) translateZ(60px) scale(1.15); /* saamne aayegi + zoom */
+  filter: brightness(1.1); /* thoda bright ho jaayegi */
 }
 
-.card .label {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  background: rgba(0,0,0,0.7);
-  color: white;
-  padding: 5px 12px;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-/* Footer (same as your design) */
+/* === FOOTER === */
 .footer {
-  background: #333;
-  color: white;
-  padding: 30px 20px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+            background-color:  #5a2d0c;
+            color: #fff;
+            margin-top: 80px;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .footer .social-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .footer .social-icons i {
+            font-size: 30px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .footer .social-icons i:hover {
+            transform: scale(1.2);
+        }
+        .footer .signup {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .footer .signup input {
+            padding: 15px;
+            border: none;
+            border-radius: 3px;
+            outline: none;
+        }
+        .footer .signup input:first-child {
+            width: 150px;
+        }
+        .footer .signup input:nth-child(2) {
+            width: 250px;
+        }
+        .footer .signup button {
+            background-color:  #a1663c;
+            border: none;
+            padding: 10px 20px;
+            color: #fff;
+            
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .footer .signup button:hover {
+            background-color: #d19f3c;
+        }
+        .footer .label {
+            font-weight: bold;
+            /* text-transform: uppercase; */
+            margin-right: 30px;
+        }
+        @media (max-width: 768px) {
+            .footer {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+            .footer .signup input:first-child, .footer .signup input:nth-child(2) {
+                width: 100%;
+            }
+        }
+
+/* === RESPONSIVENESS (For different screen sizes) === */
+
+/* For Tablets */
+@media (max-width: 992px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
 }
 
-.footer .social-icons {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 1.2rem;
-}
+/* For Mobile Phones */
+@media (max-width: 576px) {
+  nav {
+    justify-content: center; /* Center logo and nav links on mobile */
+  }
 
-.footer .social-icons .label {
-  margin-right: 10px;
-  font-weight: bold;
-}
+  .category-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
 
-.footer .social-icons i {
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.footer .social-icons i:hover {
-  transform: scale(1.2);
-  color: #ff7043;
-}
-
-.footer .signup {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.footer .signup .label {
-  font-weight: bold;
-  margin-right: 10px;
-}
-
-.footer .signup input {
-  padding: 8px 12px;
-  border: none;
-  border-radius: 8px;
-  outline: none;
-}
-
-.footer .signup button {
-  padding: 8px 15px;
-  border: none;
-  background: #ff7043;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.footer .signup button:hover {
-  background: #e64a19;
+  .card img {
+      height: 300px; 
+  }
 }
