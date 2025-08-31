@@ -1,4 +1,4 @@
-/* Reset some defaults */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,14 +6,13 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Body style */
 body {
-  background: #fff8f0; /* Soft warm background */
+  background: #fff8f0; 
   color: #333;
   line-height: 1.6;
 }
 
-/* Main container */
+
 .recipe-section {
   max-width: 1200px;
   margin: 40px auto;
@@ -23,7 +22,7 @@ body {
   gap: 50px;
 }
 
-/* Each recipe row */
+
 .recipe-row {
   display: flex;
   align-items: center;
@@ -35,13 +34,13 @@ body {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* Hover effect */
+
 .recipe-row:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
-/* Photo container */
+
 .photo-container {
   flex: 1;
   overflow: hidden;
@@ -59,14 +58,14 @@ body {
   transform: scale(1.05);
 }
 
-/* Recipe text */
+
 .recipe-container {
   flex: 2;
 }
 
 .recipe-container h2 {
   font-size: 2rem;
-  color: #d35400; /* appetizing orange */
+  color: #d35400;
   margin-bottom: 15px;
   position: relative;
 }
@@ -86,7 +85,7 @@ body {
   width: 100px;
 }
 
-/* Ingredients & steps */
+
 .recipe-container h4 {
   color: #b03a2e;
   margin: 15px 0 10px 0;
@@ -97,7 +96,7 @@ body {
   margin-bottom: 15px;
 }
 
-/* Buttons if needed in future */
+
 .view-btn {
   padding: 10px 20px;
   background: #e67e22;
@@ -113,7 +112,6 @@ body {
   transform: scale(1.05);
 }
 
-/* Responsive design */
 @media screen and (max-width: 900px) {
   .recipe-row {
     flex-direction: column;

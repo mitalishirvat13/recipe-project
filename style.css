@@ -1,4 +1,4 @@
-/* === BASIC SETUP & VARIABLES === */
+
 :root {
   --header-bg-color: #ff6f61;
   --text-color-light: #fff;
@@ -18,7 +18,7 @@ body {
   flex-direction: column;
 }
 header {
-  /* background-color:  #5a2d0c; */
+  
   padding: 15px 20px;
   position: sticky;
   top: 0;
@@ -64,34 +64,17 @@ nav ul li a:hover {
   color: var(--hover-color);
 }
 
-
-
-/* .special-line {
-    font-family: 'Great Vibes', cursive; 
-    font-size: 2.8rem;
-    text-align: center;
-    color: #5a2d0c;
-    margin-top: 30px;
-}   */
-
-
-
-
-
-
-
-
 nav ul li a {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-decoration: none;
-  color: var(--text-color-light);
+  color: brown;
   font-size: 1.3rem; 
   font-weight: 500; 
   transition: color 0.3s ease;
 }
 
 
-/* === MAIN CONTENT & CATEGORY GRID === */
+
 .heading {
   text-align: center;
   margin: 50px 20px 40px 20px; 
@@ -118,7 +101,7 @@ nav ul li a {
 
 
 .card:hover {
-    transform: translateY(-5px); /* Lifts the card up on hover */
+    transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -150,15 +133,15 @@ nav ul li a {
   object-fit: cover;
   display: block;
   transition: transform 0.6s ease, filter 0.6s ease;
-  transform: perspective(800px) translateZ(0); /* initial position */
+  transform: perspective(800px) translateZ(0); 
 }
 
 .card:hover img {
-  transform: perspective(800px) translateZ(60px) scale(1.15); /* saamne aayegi + zoom */
-  filter: brightness(1.1); /* thoda bright ho jaayegi */
+  transform: perspective(800px) translateZ(60px) scale(1.15); 
+  filter: brightness(1.1);
 }
 
-/* === FOOTER === */
+
 .footer {
             background-color:  #5a2d0c;
             color: #fff;
@@ -214,7 +197,7 @@ nav ul li a {
         }
         .footer .label {
             font-weight: bold;
-            /* text-transform: uppercase; */
+       
             margin-right: 30px;
         }
         @media (max-width: 768px) {
@@ -228,23 +211,21 @@ nav ul li a {
             }
         }
 
-/* === RESPONSIVENESS (For different screen sizes) === */
 
-/* For Tablets */
 @media (max-width: 992px) {
   .category-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
 
-/* For Mobile Phones */
+
 @media (max-width: 576px) {
   nav {
-    justify-content: center; /* Center logo and nav links on mobile */
+    justify-content: center;
   }
 
   .category-grid {
-    grid-template-columns: 1fr; /* 1 column on mobile */
+    grid-template-columns: 1fr; 
   }
 
   .card img {
