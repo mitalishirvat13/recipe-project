@@ -12,7 +12,6 @@ body {
   color: #333; 
   
 }
-
 header {
   color: #5a2d0c;
   padding: 1rem 0;
@@ -48,7 +47,6 @@ nav ul li a {
 nav ul li a:hover {
   color: #ffe0b2;
 }
-
 
 main {
   width: 90%;
@@ -131,22 +129,6 @@ main p {
   background: #ff7043;
   color: #fff;
 }
-
-
-footer {
-  background: #5a2d0c;
-  color: #fff;
-  text-align: center;
-  padding: 1.5rem 0;
-  font-size: 1rem;
-  margin-top: 2rem;
-  box-shadow: 0 -4px 8px rgba(0,0,0,0.2);
-}
-
-footer p {
-  margin: 0;
-}
-
 
 .recipe-container {
   display: grid;
