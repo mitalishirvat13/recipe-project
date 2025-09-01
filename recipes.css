@@ -9,12 +9,11 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   background: #fafafa;
-  color: #333;
+  color: #333; 
+  
 }
 
-
 header {
-  
   color: #5a2d0c;
   padding: 1rem 0;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
