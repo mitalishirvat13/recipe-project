@@ -11,7 +11,76 @@ body {
   color: #333;
   line-height: 1.6;
 }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color:  #fff7f0;
+}
 
+.recipe-contact {
+  padding-top: 15vh; 
+  position: relative;
+  z-index: 1;
+  overflow: hidden; 
+}
+
+
+header {
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 20px;
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: brown;
+  margin-left: -10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  color: brown;
+}
+
+nav ul li a {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-decoration: none;
+  color: brown;
+  font-size: 1.3rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--hover-color);
+}
+
+.heading {
+  text-align: center;
+  margin: -20px ;
+  margin-top: -30px; 
+    color:  #5a2d0c;
+}
 
 .recipe-section {
   max-width: 1200px;
