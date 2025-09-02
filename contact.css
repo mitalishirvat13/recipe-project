@@ -11,34 +11,16 @@ body {
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
-  position: relative;
-  overflow-x: hidden;
   background: #fff7f0;
-  position: relative;
   overflow-x: hidden;
-  overflow-y: auto; 
 }
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background-color:  #fff7f0;
-}
-
-.recipe-contact {
-  padding-top: 15vh; 
-  position: relative;
-  z-index: 1;
-  overflow: hidden; 
-}
-
 
 header {
   padding: 15px 20px;
   position: sticky;
   top: 0;
   z-index: 100;
+  background-color: #fff7f0;
   width: 100%;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -83,7 +65,7 @@ nav ul li a:hover {
   color: var(--hover-color);
 }
 
-.recipe-contact {
+.recipe {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,22 +122,6 @@ form textarea {
   resize: none;
 }
 
-.rating {
-  display: flex;
-  justify-content: center;
-  margin: 1vh 0;
-}
-
-.rating input {
-  display: none;
-}
-
-.rating label {
-  font-size: min(6vw, 1.5rem);
-  cursor: pointer;
-  margin: 0 0.5vw;
-}
-
 button {
   background-color: #5a2d0c;
   color: white;
@@ -171,18 +137,4 @@ button:hover {
   background-color: #5a2d00;
 }
 
-#successMessage {
-  display: none;
-  margin-top: 1vh;
-  color: green;
-  font-weight: bold;
-}
 
-footer {
-  background-color: #5a2d0c;
-  color: white;
-  text-align: center;
-  padding: 2vh 2%;
-  margin-top: auto;
-  font-size: min(4vw, 1rem);
-}
