@@ -8,7 +8,6 @@
 
 body {
   background: #fff8f0; 
-  color: #333;
   line-height: 1.6;
 }
 header {
@@ -181,13 +180,6 @@ nav ul li a:hover {
   transform: scale(1.05);
 }
 
-/* @media screen and (max-width: 900px) {
-  .recipe-row {
-    flex-direction: column; 
-  }
- 
-} */
-
 @media screen and (max-width: 600px) {
   nav {
     flex-direction: column; 
@@ -196,11 +188,9 @@ nav ul li a:hover {
     text-align: center;
     margin: 0;
   }
-
   nav ul {
     gap: 20px; 
   }
-
   .recipe-row {
     flex-direction: column; 
   }
