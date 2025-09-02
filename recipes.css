@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +5,7 @@
 }
 
 body {
+<<<<<<< HEAD
 
   margin: 0;
   padding: 0;
@@ -24,10 +24,22 @@ body {
 
 
 header {
+=======
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #fff7f0; 
+  color: #333; 
+>>>>>>> 33d2a0cb0cac47ffd0c1906b8c1e07d3aa3b6d98
   
+}
+header {
   color: #5a2d0c;
   padding: 1rem 0;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  position: sticky;
+  background-color: #fdf6f0;
+  top: 0;
+  z-index: 1;
 }
 
 nav {
@@ -57,20 +69,19 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #ffe0b2;
+   color: #ffe0b2; 
 }
 
-
 main {
-  width: 90%;
-  margin: 2rem auto;
-  text-align: center;
+  width: 90%; 
+  margin: 2rem auto; 
+  text-align: center; 
 }
 
 main h1 {
-  font-size: 2.5rem;
+  font-size: 2.5rem; 
   color:#800020;
-  margin-bottom: 1rem;
+  
 }
 
 main p {
@@ -109,28 +120,28 @@ main p {
 }
 
 .view-btn{
-  display:inline-block;
-  padding: 0.6rem 1.2rem;
-  margin: 1rem 0;
+  display:inline-block; 
+  padding: 0.6rem 1.2rem; 
+  margin: 1rem 0; 
   background: #5a2d0c;
-  color: #fff;
-  font-size: 1rem;
+  color: #fff; 
+  font-size: 1rem; 
   font-weight: 500;
-  border: none;
+  border: none; 
   border-radius: 25px;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+  cursor: pointer;  
+ 
 
 }
 
 .view-btn:hover{
   background: #5a2d0c;
-  transform: sacle(1.05);
+ 
 }
 
 
 .label {
-  padding: 1rem;
+  padding: 1rem; 
   font-size: 1.3rem;
   font-weight: bold;
   background: #ffcc80;
@@ -139,14 +150,16 @@ main p {
 }
 
 .card:hover .label {
-  background: #ff7043;
   color: #fff;
 }
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 33d2a0cb0cac47ffd0c1906b8c1e07d3aa3b6d98
 .recipe-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
