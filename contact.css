@@ -7,10 +7,7 @@
 body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
   font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
   background: #fff7f0;
   position: relative;
   overflow-x: hidden;
@@ -24,17 +21,15 @@ header {
   background-color: #fff7f0;
   width: 100%;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  line-height: 1.6;
 }
 
 nav {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between;  
   align-items: center;
-  flex-wrap: wrap;
   max-width: 1200px;
   margin: auto;
-  gap: 20px;
   width: 100%;
 }
 
@@ -42,23 +37,21 @@ nav {
   font-size: 1.8rem;
   font-weight: bold;
   color: brown;
-  margin-left: -10px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   gap: 25px;
-  color: brown;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-decoration: none;
   color: brown;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 500;
   transition: color 0.3s ease;
 }
@@ -77,34 +70,32 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;
-  padding: 15vh 5%;
+  padding: 10vh 5%;
   box-sizing: border-box;
-  margin-top: 80px;
 }
 
 .card {
   background-color: rgba(255,255,255,0.95);
-  padding: min(5vw, 30px);
+  padding: 30px;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   width: min(90%, 600px);
   text-align: center;
   z-index: 1;
   box-sizing: border-box;
-  margin: 20px auto; /* Negative margin hataya */
+  margin: 20px auto;
 }
 
 .card h1 {
   margin-bottom: 1vh;
   color: #ff6f61;
-  font-size: min(6vw, 2rem);
+  font-size: 2rem;
 }
 
 .card p {
   margin-bottom: 2vh;
   color: #555;
-  font-size: min(4vw, 1rem);
+  font-size: 1rem;
 }
 
 form label {
@@ -112,18 +103,18 @@ form label {
   text-align: left;
   margin: 1vh 0 0.5vh 0;
   font-weight: bold;
-  font-size: min(4vw, 1rem);
+  font-size: 1rem;
 }
 
-form input, 
-form textarea, 
+form input,
+form textarea,
 form select {
   width: 100%;
-  padding: min(2vw, 10px);
+  padding: 10px;
   margin-bottom: 1.5vh;
   border-radius: 8px;
   border: 1px solid #ccc;
-  font-size: min(4vw, 1rem);
+  font-size: 1rem;
   outline: none;
 }
 
@@ -136,9 +127,9 @@ button {
   background-color: #5a2d0c;
   color: white;
   border: none;
-  padding: min(2vw, 12px) min(4vw, 20px);
+  padding: 12px 20px;
   border-radius: 8px;
-  font-size: min(4vw, 1rem);
+  font-size: 1rem;
   cursor: pointer;
   transition: background 0.3s;
 }
