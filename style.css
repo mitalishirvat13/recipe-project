@@ -1,9 +1,3 @@
-:root {
-  --header-bg-color: #ff6f61;
-  --text-color-light: #fff;
-  --hover-color: #ffd1c1;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +19,7 @@ header {
   top: 0;
   z-index: 100;
   width: 100%;
-  background-color: #fff7f0;
+  background-color: #fff7f0;  
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -66,29 +60,18 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: var(--hover-color);
+  color: #ffd1c1; 
 }
-
 
 .heading {
   text-align: center;
   margin: 50px 20px 40px 20px; 
   color: #800020;
-
-}
-
-.category {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px; 
 }
 
 .card {
   text-align: center;
-  background-color: var(--text-color-light);
+  background-color: #fff; 
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -119,9 +102,16 @@ nav ul li a:hover {
   font-weight: bold;
   margin: 8px 0 12px 0;
   font-size: 0.9rem;
-  
 }
 
+.category {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
 
 .footer {
   background-color: #5a2d0c;
@@ -220,16 +210,6 @@ nav ul li a:hover {
   }
 }
 
-.category {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
-}
-
-
 @media (max-width: 992px) {
   .category {
     grid-template-columns: repeat(2, 1fr);
@@ -241,6 +221,6 @@ nav ul li a:hover {
     grid-template-columns: 1fr;
   }
   .card img {
-    height: 300px; /
+    height: 300px;
   }
 }
